@@ -15,6 +15,7 @@ const reducer: Reducer<IRecipeListState, TAction> = (
     case "SEARCH":
       return { ...state, error: null, isLoading: true };
     case "SEARCH_SUCCESS":
+      console.log('$$$$$data', action.data)
       return { ...state, error: null, isLoading: false, data: action.data };
     case "SEARCH_FAIL":
       return { ...state, isLoading: false, error: action.error };

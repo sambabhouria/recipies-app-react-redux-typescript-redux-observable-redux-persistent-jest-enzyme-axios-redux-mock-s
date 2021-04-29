@@ -10,3 +10,4 @@ In the project directory, you can run:
 <img src="src/assets/img/1.png" width="300" height="300"/><img src="src/assets/img/2.png" width="300" height="300"/>
 <img src="src/assets/img/3.png" width="300" height="300"/><img src="src/assets/img/4.png" width="300" height="300"/>
 <img src="src/assets/img/5.png" width="300" height="300"/><img src="src/assets/img/6.png" width="300" height="300"/>
+<img src="src/assets/img/7.png" width="300" height="300"/><img src="src/assets/img/8.png" width="300" height="300"/>
