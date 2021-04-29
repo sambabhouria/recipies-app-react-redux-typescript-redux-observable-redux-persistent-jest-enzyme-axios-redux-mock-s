@@ -13,7 +13,11 @@ export const useSearchContext = () => useContext(SearchContext);
 export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   children
 }) => {
-  const [query, updateQuery] = useState("pizza");
+  console.log("🚀 ~ file: SearchContext.tsx ~ line 16 ~ children", children)
+  // const [query, updateQuery] = useState("pizza");
+  // const [query, updateQuery] = useState("soup");
+  const [query, updateQuery] = useState("ice cream");
+
 
   return (
     <SearchContext.Provider value={{ query, updateQuery }}>

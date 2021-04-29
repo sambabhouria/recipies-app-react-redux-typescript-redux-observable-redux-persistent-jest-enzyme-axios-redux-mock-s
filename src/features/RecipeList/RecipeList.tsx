@@ -13,6 +13,7 @@ import "./RecipeList.scss";
 
 const RecipeList: React.FC = () => {
   const { query } = useSearchContext();
+   console.log('query in the recip list', query)
   const dispatch = useDispatch();
 
   const { data, isLoading, error } = useSelector(
