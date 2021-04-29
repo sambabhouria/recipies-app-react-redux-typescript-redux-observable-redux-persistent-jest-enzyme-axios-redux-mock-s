@@ -1,3 +1,75 @@
+
+/*
+
+Example Request and Response
+GET https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2
+
+
+{
+    "offset": 0,
+    "number": 2,
+    "results": [
+        {
+            "id": 716429,
+            "calories": 584,
+            "carbs": "84g",
+            "fat": "20g",
+            "image": "https://spoonacular.com/recipeImages/716429-312x231.jpg",
+            "imageType": "jpg",
+            "protein": "19g",
+            "title": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs"
+        },
+        {
+            "id": 715538,
+            "calories": 521,
+            "carbs": "69g",
+            "fat": "10g",
+            "image": "https://spoonacular.com/recipeImages/715538-312x231.jpg",
+            "imageType": "jpg",
+            "protein": "35g",
+            "title": "What to make for dinner tonight?? Bruschetta Style Pork & Pasta"
+        }
+    ],
+    "totalResults": 86
+}
+
+The API response will give you arrays of usedIngredients, missedIngredients, and unusedIngredients for each returned recipe. This diagram shows you what they mean:
+
+*/
+
+
+/*
+
+Example Request and Response
+GET https://api.spoonacular.com/recipes/findByNutrients?minCarbs=10&maxCarbs=50&number=2
+
+
+[
+    {
+        "calories": 210,
+        "carbs": "43g",
+        "fat": "3g",
+        "id": 90629,
+        "image": "https://spoonacular.com/recipeImages/90629-312x231.jpg",
+        "imageType": "jpg",
+        "protein": "1g",
+        "title": "Baked Apples in White Wine"
+    },
+    {
+        "calories": 226,
+        "carbs": "33g",
+        "fat": "10g",
+        "id": 284420,
+        "image": "https://spoonacular.com/recipeImages/284420-312x231.jpg",
+        "imageType": "jpg",
+        "protein": "2g",
+        "title": "Chocolate Silk Pie with Marshmallow Meringue"
+    }
+]
+
+*/
+
+
 const data = {
     results: [
       {
