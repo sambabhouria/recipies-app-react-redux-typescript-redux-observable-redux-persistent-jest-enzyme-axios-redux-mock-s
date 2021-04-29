@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container } from "reactstrap";
+import { Route, Switch, Redirect } from "react-router-dom";
+
+import { Header, Footer } from "./views";
+import RecipeList from "./features/RecipeList/RecipeList";
+import Recipe from "./features/Recipe/Recipe";
+import ShopList from "./features/ShopList/ShopList";
+import Likes from "./features/Likes/Likes"
+
+
+import { SearchProvider } from "./contexts/SearchContext";
+import WithErrorHandler from "./hoc/WithErrorHandler";
+
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-app w-100">
+         <Container className="content p-3 pt-4">
+          <WithErrorHandler>
+            <SearchProvider>
+               <Header />
+              <RecipeList />
+              <Switch>
+              <Route path="/recipe/:recipe_id(\d+)" exact component={Recipe} />
+              <Route path="/" exact component={Recipe} />
+              <Redirect to="/" />
+            </Switch>
+            </SearchProvider>
+          </WithErrorHandler>
+          <Likes />
+          <ShopList />
+         </Container>
+           <Footer />
     </div>
   );
 }
