@@ -11,7 +11,7 @@ const Header:React.FC = () => {
     <>
       <header className="d-flex justify-content-center align-items-start">
         <img src={Logo} alt="Recipe-App" className="logo" />
-        <div className="title  d-none d-lg-block">RecipiesApp</div>
+        <div className="title  d-none d-lg-block">sambabhouria's RecipiesApp</div>
         <SearchForm />
 
                 <a className="text-success ml-3 mt-2"
