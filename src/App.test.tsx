@@ -1,4 +1,4 @@
-// import { Provider } from "react-redux";
+
 import { shallow } from "enzyme";
 import configureStore from "redux-mock-store";
 import App from "./App";
