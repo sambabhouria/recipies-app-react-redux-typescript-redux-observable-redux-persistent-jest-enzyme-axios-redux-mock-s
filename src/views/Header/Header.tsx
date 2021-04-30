@@ -3,6 +3,7 @@ import React from "react";
 import SearchForm from "../../features/SearchForm/SearchForm";
 
 import Logo from "../../assets/img/logo.png";
+import smababhouria from'../../assets/img/avatar.png';
 
 import "./Header.scss";
 
@@ -20,6 +21,7 @@ const Header:React.FC = () => {
                 >
                   <i className="fab fa-github" />
                 </a>
+                <img src={Logo} alt="Recipe-App" className="logo" />
       </header>
     </>
   );
